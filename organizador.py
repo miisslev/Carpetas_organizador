@@ -64,7 +64,7 @@ texto_input = ""
 fuente_input = pygame.font.SysFont("comicsansms", 18)
 textbox_activo = False
 
-mensaje_pantalla = "Organizar"
+mensaje_pantalla = "Ingrese ruta a organizar"
 fuente = pygame.font.SysFont("comicsansms", 24, bold=True)
 
 #bucle principal
@@ -85,22 +85,26 @@ while True:
                 textbox_activo = False
            
             if mouse_encima:
-                mensaje_pantalla = "Limpiando desorden..."
-                ventana.blit(fondo, (0, 0))
-                ventana.blit(btn_presionado, btn_rect)
-                ventana.blit(hada_presionado, hada_rect)
-                pygame.display.flip()
-                
-                ruta_a_organizar = Path(texto_input)
-                
-                if ruta_a_organizar.exists() and ruta_a_organizar.is_dir():
-                    total_archivos = organizar_carpeta(ruta_a_organizar)
-                    if total_archivos > 0:
-                        mensaje_pantalla = f"Exito, se movieron {total_archivos} archivos."
-                    else:
-                        mensaje_pantalla = "Carpeta limpia previamente"
+                #valida si la caja esta vacia antes de hacer nada
+                if texto_input.strip() == "":
+                    mensaje_pantalla = "Por favor, escribe o pega una ruta"
                 else:
-                    mensaje_pantalla = "Error: La ruta escrita no es válida"
+                    mensaje_pantalla = "Limpiando desorden..."
+                    ventana.blit(fondo, (0, 0))
+                    ventana.blit(btn_presionado, btn_rect)
+                    ventana.blit(hada_presionado, hada_rect)
+                    pygame.display.flip()
+                    
+                    ruta_a_organizar = Path(texto_input)
+                    
+                    if ruta_a_organizar.exists() and ruta_a_organizar.is_dir():
+                        total_archivos = organizar_carpeta(ruta_a_organizar)
+                        if total_archivos > 0:
+                            mensaje_pantalla = f"Exito, se movieron {total_archivos} archivos."
+                        else:
+                            mensaje_pantalla = "Carpeta limpia previamente"
+                    else:
+                        mensaje_pantalla = "Error: La ruta escrita no es válida"
 
         #detecta entradas del tecladoo
         if evento.type == pygame.KEYDOWN:
