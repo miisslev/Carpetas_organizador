@@ -1,15 +1,15 @@
-# Organizador de archivos con interfaz grafica en Pygame
+# Organizador de archivos con interfaz gráfica en Pygame
 
 ## Demostración de la Interfaz
 
-### Como se ve al entrar
-![Como se ve al entrar](interfaz/Como se ve al entrar.png)
+### Cómo se ve al entrar
+![Como se ve al entrar](interfaz/Como se ve al entrar.PNG)
 
-### Como se ve cuando ya se limpio la carpeta
-![Como se ve al limpiar la ruta](interfaz/Como se ve al limpiar la ruta.png)
+### Cómo se ve al limpiar la ruta
+![Como se ve al limpiar la ruta](interfaz/Como se ve al limpiar la ruta.PNG)
 
-### Como se ve cuando ya se habia limpiado la carpeta previamente
-![Ruta limpia previamente](interfaz/Ruta limpia previamente.png)
+### Ruta limpia previamente
+![Ruta limpia previamente](interfaz/Ruta limpia previamente.PNG)
 
 ## Requisitos
 Para ejecutar este programa se necesita tener instalado:
