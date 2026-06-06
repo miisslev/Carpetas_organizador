@@ -3,13 +3,13 @@
 ## Demostración de la Interfaz
 
 ### Cómo se ve al entrar
-![entrar](interfaz/Como se ve al entrar.PNG)
+![entrar](Como se ve al entrar.PNG)
 
 ### Cómo se ve al limpiar la ruta
-![limpio](interfaz/Como se ve al limpiar la ruta.PNG)
+![limpio](Como se ve al limpiar la ruta.PNG)
 
 ### Ruta limpia previamente
-![antes](interfaz/Ruta limpia previamente.PNG)
+![antes](Ruta limpia previamente.PNG)
 
 ## Requisitos
 Para ejecutar este programa se necesita tener instalado:
